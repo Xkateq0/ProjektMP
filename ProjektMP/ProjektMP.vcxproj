@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CDisplay.cpp" />
     <ClCompile Include="ProjektMP.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CDisplay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
