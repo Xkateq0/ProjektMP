@@ -1,3 +1,4 @@
+Projekt MP
 Pracujemy nad aplikacją, która dostarcza bibliotek graficznych do wyświetlania skomplikowanych
 obiektów. Kluczowe jest, aby tworzone rozwiązanie było elastyczne, pozwalało na łatwe dodawanie
 nowych bibliotek, oraz umożliwiało dynamiczną zmianę biblioteki dla aktualnie rysowanego obiektu.
