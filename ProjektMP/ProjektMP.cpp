@@ -7,11 +7,11 @@
 
 int main()
 {
-    GraphicalDisplay display(10, 10);
+    GraphicalDisplay display(25,25);
     /*
     display.drawCircle(3);
     display.display();*/
-    display.drawTriangle(3, 2, 2,-2);
+    display.drawTriangle(3, 2, 2, -2);
     display.display();
 
 }
