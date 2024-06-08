@@ -2,13 +2,15 @@
 #ifndef CDISPLAY_H
 #define CDISPLAY_H
 
-class CDisplay
+class Display
 {
 public:
-	void drawTriangle(int a1, int a2, int b1, int b2);
+	virtual void drawTriangle(int a1, int a2, int b1, int b2)=0;
 
-	void drawCircle(int r);
+	virtual void drawCircle(int r)=0;
 
-	void drawParallelogram(int a1, int a2, int b1, int b2);
+	virtual void drawParallelogram(int a1, int a2, int b1, int b2)=0;
+
+	virtual ~Display() = default;
 };
 #endif // !CDISPLAY_H

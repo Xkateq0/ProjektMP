@@ -128,10 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CDisplay.cpp" />
+    <ClCompile Include="CGraphicalDisplay.cpp" />
+    <ClCompile Include="CTextDisplay.cpp" />
     <ClCompile Include="ProjektMP.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CDisplay.h" />
+    <ClInclude Include="CGraphicalDisplay.h" />
+    <ClInclude Include="CTextDisplay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

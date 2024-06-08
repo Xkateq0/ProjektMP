@@ -2,10 +2,14 @@
 //
 
 #include <iostream>
+#include "CDisplay.h"
+#include "CGraphicalDisplay.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    GraphicalDisplay display(10, 10);
+    display.drawCircle(3);
+    display.display();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
