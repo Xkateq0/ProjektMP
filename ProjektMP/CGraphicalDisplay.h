@@ -5,6 +5,7 @@
 #include "CDisplay.h"
 #include <vector>
 #include <iostream>
+#include <algorithm> 
 
 class GraphicalDisplay : public Display
 {

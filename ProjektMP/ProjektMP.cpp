@@ -8,8 +8,12 @@
 int main()
 {
     GraphicalDisplay display(10, 10);
+    /*
     display.drawCircle(3);
+    display.display();*/
+    display.drawTriangle(3, 2, 2,-2);
     display.display();
+
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
