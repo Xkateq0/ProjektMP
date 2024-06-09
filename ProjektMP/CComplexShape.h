@@ -11,6 +11,7 @@ public:
     ComplexShape(Display* w);
     bool add(Shape* o);
     void draw() override;
+    ~ComplexShape();
 };
 
 #endif // COMPLEXSHAPE_H#

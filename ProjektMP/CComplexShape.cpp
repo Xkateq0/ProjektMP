@@ -15,3 +15,11 @@ void ComplexShape::draw() {
         shape->draw();
     }
 }
+
+ComplexShape::~ComplexShape()
+{
+    for (Shape* shape : shapes) {
+		delete shape;
+	}
+	shapes.clear();
+}

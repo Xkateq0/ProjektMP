@@ -1,9 +1,9 @@
 #ifndef CTRIANGLE_H
 #define CTRIANGLE_H
 
-#include "CDisplay.h"
+#include "CShape.h"
 
-class Triangle : public Display
+class Triangle : public Shape
 {
 	private:
 	int a1;
