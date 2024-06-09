@@ -130,8 +130,10 @@
     <ClCompile Include="CCircle.cpp" />
     <ClCompile Include="CComplexShape.cpp" />
     <ClCompile Include="CGraphicalDisplay.cpp" />
+    <ClCompile Include="CParallelogram.cpp" />
     <ClCompile Include="CShape.cpp" />
     <ClCompile Include="CTextDisplay.cpp" />
+    <ClCompile Include="CTriagle.cpp" />
     <ClCompile Include="ProjektMP.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,8 +141,11 @@
     <ClInclude Include="CComplexShape.h" />
     <ClInclude Include="CDisplay.h" />
     <ClInclude Include="CGraphicalDisplay.h" />
+    <ClInclude Include="CParallelogram.h" />
     <ClInclude Include="CTextDisplay.h" />
     <ClInclude Include="CShape.h" />
+    <ClInclude Include="CTriagle.h" />
+    <ClInclude Include="LibExceptions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

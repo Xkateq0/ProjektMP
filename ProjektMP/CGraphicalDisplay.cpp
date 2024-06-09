@@ -1,15 +1,16 @@
 #include "CGraphicalDisplay.h"
+#include "LibExceptions.h"
 
 
-GraphicalDisplay::GraphicalDisplay(int w, int h) : width(w), height(h) {
-    canvas = std::vector<std::vector<char>>(height, std::vector<char>(width, ' '));
-}
+GraphicalDisplay::GraphicalDisplay() {}
 
 void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
+    if ((float)a1 / b1 == (float)a2 / b2) throw InvalidArgument("Wektor a i b nie s¹ liniowo niezale¿ne");
     int minX = std::min({ 0, a1, b1});
     int minY = std::min({ 0, a2, b2});
     int maxX = std::max({ 0, a1, b1});
     int maxY = std::max({ 0, a2, b2});
+
 
     for (int y = maxY; y >= minY; --y) {
         for (int x = minX; x <= maxX; ++x) {
@@ -25,32 +26,48 @@ void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
             float s = (dotProductbb * dotProductap - dotProductab * dotProductbp) / denominator;
 			float t = (dotProductaa * dotProductbp - dotProductab * dotProductap) / denominator;
 			if (s >= 0 && t >= 0 && s + t <= 1) {
-				canvas[maxY - y][x - minX] = 't';
-			}
+				std::cout<< "t";
+            }
+            else {
+                std::cout<<" ";
+            }
         }
+        std::cout<<std::endl;
     }
+    std::cout << std::endl;
 }
 
 void GraphicalDisplay::drawCircle(int r)
 {
+    if(r<0)
+	{
+		throw InvalidArgument("Promieñ ko³a nie mo¿e byæ ujemny");
+	}
+    int width = 2 * r + 1;
+    int height = 2 * r + 1;
     for (int y = -r; y <= r; ++y) {
         for (int x = -r; x <= r; ++x) {
             if (x * x + y * y <= r * r) {
                 int posX = r + x;
                 int posY = r + y;
                 if (posX >= 0 && posX < width && posY >= 0 && posY < height) {
-                    canvas[posY][posX] = 'c';
+                    std::cout << "c";
                 }
             }
+			else {
+				std::cout << " ";
         }
+		}
+        std::cout << std::endl;
     }
+    std::cout << std::endl;
 }
 
 
 void GraphicalDisplay::drawParallelogram(int a1, int a2, int b1, int b2) {
+    if((float)a1/ b1 == (float)a2 / b2) throw InvalidArgument("Wektor a i b nie s¹ liniowo niezale¿ne");
     int c1 = a1 + b1;
     int c2 = a2 + b2;
-    int size = canvas.size() / 2;
     int minX = std::min({ 0, a1, b1, c1 });
     int minY = std::min({ 0, a2, b2, c2 });
     int maxX = std::max({ 0, a1, b1, c1 });
@@ -61,19 +78,15 @@ void GraphicalDisplay::drawParallelogram(int a1, int a2, int b1, int b2) {
             float s = (float)(x * b2 - y * b1) / (a1 * b2 - a2 * b1);
             float t = (float)(a1 * y - a2 * x) / (a1 * b2 - a2 * b1);
             if (s >= 0 && s <= 1 && t >= 0 && t <= 1) {
-                canvas[maxY - y][x - minX] = 'p';
+                std::cout << "p";
             }
-        }
-    }
-}
-
-
-void GraphicalDisplay::display() const {
-    for (const auto& row : canvas) {
-        for (char pixel : row) {
-            std::cout << pixel;
+			else {
+				std::cout << " ";
+			}
         }
         std::cout << std::endl;
     }
+    std::cout << std::endl;
 }
+
 
